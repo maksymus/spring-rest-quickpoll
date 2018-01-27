@@ -1,6 +1,6 @@
 package org.homenet.rest.quickpoll.controller;
 
-import org.homenet.rest.quickpoll.controller.exception.ResourceNotFoundException;
+import org.homenet.rest.quickpoll.controller.error.ResourceNotFoundException;
 import org.homenet.rest.quickpoll.domain.Poll;
 import org.homenet.rest.quickpoll.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class PollController {
     }
 
     @RequestMapping(value = "/polls", method = RequestMethod.POST)
-    public ResponseEntity<Poll> savePoll(@RequestBody Poll poll) {
+    public ResponseEntity<Poll> savePoll(@Valid @RequestBody Poll poll) {
         Poll saved = pollRepository.save(poll);
 
         URI savedPollUri = ServletUriComponentsBuilder

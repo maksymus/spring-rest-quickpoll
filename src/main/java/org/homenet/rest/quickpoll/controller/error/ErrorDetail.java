@@ -1,5 +1,9 @@
-package org.homenet.rest.quickpoll.controller.exception;
+package org.homenet.rest.quickpoll.controller.error;
 
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ErrorDetail {
     private String title;
@@ -7,6 +11,9 @@ public class ErrorDetail {
     private String details;
     private long timestamp;
     private	String	developerMessage;
+
+    // <field, error_list>
+    private Map<String, List<ValidationError>> errors = new HashMap<>();
 
     public String getTitle() {
         return title;
@@ -46,5 +53,13 @@ public class ErrorDetail {
 
     public void setDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
+    }
+
+    public Map<String, List<ValidationError>> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(Map<String, List<ValidationError>> errors) {
+        this.errors = errors;
     }
 }
