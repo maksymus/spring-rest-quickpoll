@@ -1,5 +1,7 @@
 package org.homenet.rest.quickpoll.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.homenet.rest.quickpoll.controller.dto.OptionCount;
 import org.homenet.rest.quickpoll.controller.dto.VoteResult;
 import org.homenet.rest.quickpoll.domain.Option;
@@ -16,12 +18,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Api("Computes vote result")
 @RestController
 public class ComputeResultController {
     @Autowired
     private VoteRepository voteRepository;
 
-    @RequestMapping(value = "/computeresult", method = RequestMethod.GET)
+    @ApiOperation(value = "Retrieves all polls", response = VoteResult.class)
+    @RequestMapping(value = "/api/computeresult", method = RequestMethod.GET)
     public ResponseEntity<VoteResult> computeResult(@RequestParam Long pollId) {
         VoteResult voteResult = countVotes(pollId);
         return ResponseEntity.ok(voteResult);
