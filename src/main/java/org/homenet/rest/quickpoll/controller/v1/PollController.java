@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
-@RestController
+@RestController("PollControllerV1")
 @RequestMapping("/api/v1")
 public class PollController {
 

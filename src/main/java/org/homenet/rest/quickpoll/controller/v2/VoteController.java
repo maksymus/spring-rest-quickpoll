@@ -9,7 +9,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 
-@RestController
+@RestController("VoteControllerV2")
 @RequestMapping("/api/v2")
 public class VoteController {
     @Autowired

@@ -11,7 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@RestController
+@RestController("VoteControllerV1")
 @RequestMapping("/api/v1")
 public class VoteController {
     @Autowired

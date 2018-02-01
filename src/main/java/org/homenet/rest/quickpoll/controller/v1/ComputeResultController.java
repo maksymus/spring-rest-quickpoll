@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @Api("Computes vote result")
-@RestController
+@RestController("ComputeResultControllerV1")
 @RequestMapping("/api/v1")
 public class ComputeResultController {
     @Autowired
