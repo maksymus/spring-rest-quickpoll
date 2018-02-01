@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.error;
+package org.homenet.rest.quickpoll.controller.v1.error;
 
 
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package org.homenet.rest.quickpoll.controller;
+package org.homenet.rest.quickpoll.controller.v2;
 
-import org.homenet.rest.quickpoll.controller.error.ResourceNotFoundException;
+import org.homenet.rest.quickpoll.controller.v1.error.ResourceNotFoundException;
 import org.homenet.rest.quickpoll.domain.Poll;
 import org.homenet.rest.quickpoll.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v2")
 public class PollController {
 
     @Autowired

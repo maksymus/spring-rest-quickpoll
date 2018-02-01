@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.dto;
+package org.homenet.rest.quickpoll.controller.v1.dto;
 
 public class OptionCount {
     private long optionId;

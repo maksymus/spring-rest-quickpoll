@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller;
+package org.homenet.rest.quickpoll.controller.v1;
 
 import org.homenet.rest.quickpoll.domain.Poll;
 import org.homenet.rest.quickpoll.domain.Vote;
@@ -12,11 +12,12 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v1")
 public class VoteController {
     @Autowired
     private VoteRepository voteRepository;
 
-    @RequestMapping(value = "polls/{pollId}/votes", method = RequestMethod.POST)
+    @RequestMapping(value = "/polls/{pollId}/votes", method = RequestMethod.POST)
     public ResponseEntity<Vote> saveVote(@RequestBody Vote vote, @PathVariable long pollId) {
         Vote saved = voteRepository.save(vote);
 

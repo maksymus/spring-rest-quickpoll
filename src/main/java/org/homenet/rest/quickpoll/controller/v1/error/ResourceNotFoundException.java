@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.error;
+package org.homenet.rest.quickpoll.controller.v1.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

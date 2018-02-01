@@ -1,10 +1,9 @@
-package org.homenet.rest.quickpoll.controller;
+package org.homenet.rest.quickpoll.controller.v2;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.homenet.rest.quickpoll.controller.dto.OptionCount;
-import org.homenet.rest.quickpoll.controller.dto.VoteResult;
-import org.homenet.rest.quickpoll.domain.Option;
+import org.homenet.rest.quickpoll.controller.v1.dto.OptionCount;
+import org.homenet.rest.quickpoll.controller.v1.dto.VoteResult;
 import org.homenet.rest.quickpoll.domain.Vote;
 import org.homenet.rest.quickpoll.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +19,13 @@ import java.util.Map;
 
 @Api("Computes vote result")
 @RestController
+@RequestMapping("/api/v2")
 public class ComputeResultController {
     @Autowired
     private VoteRepository voteRepository;
 
     @ApiOperation(value = "Retrieves all polls", response = VoteResult.class)
-    @RequestMapping(value = "/api/computeresult", method = RequestMethod.GET)
+    @RequestMapping(value = "/computeresult", method = RequestMethod.GET)
     public ResponseEntity<VoteResult> computeResult(@RequestParam Long pollId) {
         VoteResult voteResult = countVotes(pollId);
         return ResponseEntity.ok(voteResult);
