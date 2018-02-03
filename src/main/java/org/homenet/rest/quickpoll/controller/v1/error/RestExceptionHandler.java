@@ -23,7 +23,7 @@ import java.util.Map;
 // TypeMismatchException.class, HttpMessageNotReadableException.class, HttpMessageNotWritableException.class,
 // MethodArgumentNotValidException.class, MissingServletRequestPartException.class, BindException.class,
 // NoHandlerFoundException.class, AsyncRequestTimeoutException.class})
-@ControllerAdvice
+@ControllerAdvice(basePackages = "org.homenet.rest.quickpoll.controller")
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
