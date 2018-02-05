@@ -1,9 +1,11 @@
 package org.homenet.rest.quickpoll.controller.v2;
 
-import org.homenet.rest.quickpoll.controller.v1.error.ResourceNotFoundException;
+import org.homenet.rest.quickpoll.controller.error.ResourceNotFoundException;
 import org.homenet.rest.quickpoll.domain.Poll;
 import org.homenet.rest.quickpoll.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -19,9 +21,11 @@ public class PollController {
     @Autowired
     private PollRepository pollRepository;
 
+    // localhost:8080/api/v2/polls?page=0&size=2
+    // localhost:8080/api/v2/polls?sort=question,desc
     @RequestMapping(value = "/polls", method = RequestMethod.GET)
-    public ResponseEntity<Iterable<Poll>> getPolls() {
-        List<Poll> polls = pollRepository.findAll();
+    public ResponseEntity<Page<Poll>> getPolls(Pageable pageable) {
+        Page<Poll> polls = pollRepository.findAll(pageable);
         return ResponseEntity.ok().body(polls);
     }
 

@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.v1.error;
+package org.homenet.rest.quickpoll.controller.error;
 
 public class ValidationError {
     private String code;

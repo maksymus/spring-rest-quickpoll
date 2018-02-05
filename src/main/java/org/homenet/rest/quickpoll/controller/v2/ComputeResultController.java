@@ -2,8 +2,8 @@ package org.homenet.rest.quickpoll.controller.v2;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.homenet.rest.quickpoll.controller.v1.dto.OptionCount;
-import org.homenet.rest.quickpoll.controller.v1.dto.VoteResult;
+import org.homenet.rest.quickpoll.controller.dto.OptionCount;
+import org.homenet.rest.quickpoll.controller.dto.VoteResult;
 import org.homenet.rest.quickpoll.domain.Vote;
 import org.homenet.rest.quickpoll.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;

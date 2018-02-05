@@ -1,6 +1,6 @@
 package org.homenet.rest.quickpoll.controller.v1;
 
-import org.homenet.rest.quickpoll.controller.v1.error.ResourceNotFoundException;
+import org.homenet.rest.quickpoll.controller.error.ResourceNotFoundException;
 import org.homenet.rest.quickpoll.domain.Poll;
 import org.homenet.rest.quickpoll.repository.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
