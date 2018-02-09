@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.v3.v2;
+package org.homenet.rest.quickpoll.controller.v3;
 
 import org.homenet.rest.quickpoll.controller.error.ResourceNotFoundException;
 import org.homenet.rest.quickpoll.domain.Poll;

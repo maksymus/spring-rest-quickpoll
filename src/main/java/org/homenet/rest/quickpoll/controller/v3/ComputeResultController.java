@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.v3.v2;
+package org.homenet.rest.quickpoll.controller.v3;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,4 +1,4 @@
-package org.homenet.rest.quickpoll.controller.v3.v2;
+package org.homenet.rest.quickpoll.controller.v3;
 
 import org.homenet.rest.quickpoll.domain.Vote;
 import org.homenet.rest.quickpoll.repository.VoteRepository;
