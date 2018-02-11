@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @RestController("PollControllerV3")
-@RequestMapping("/api/v3")
+@RequestMapping({"/api/v3", "/api/oauth2/v3" })
 public class PollController {
 
     @Autowired
